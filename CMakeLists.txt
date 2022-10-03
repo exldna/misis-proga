@@ -6,7 +6,7 @@ add_library(settings INTERFACE)
 target_compile_features(settings INTERFACE cxx_std_17)
 
 file(GLOB_RECURSE SOURCE_LIST
-    "./titov_d_a/*.cxx"
+    "./titov_d_a/*.cpp"
 )
 
 foreach(file ${SOURCE_LIST})
