@@ -24,7 +24,7 @@ double sum(double x, double epsilon) {
     double s = 0, st;
     for (int i = 1; ; ++i) {
         s += (st = step(x, i));
-	if (std::abs(st) < epsilon) break;
+	      if (std::abs(st) < epsilon) break;
     }
     return s;
 }
