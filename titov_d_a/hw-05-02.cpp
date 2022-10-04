@@ -18,8 +18,7 @@ double sum(double x, double epsilon) {
     for (int i = 1; ; ++i) {
         s += (st = step(p, i));
         p *= x;
-        std::cout << st << '\n';
-        // if (std::abs(st) < epsilon) break;
+        if (std::abs(st) < epsilon) break;
     }
     return s;
 }
