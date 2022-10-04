@@ -3,13 +3,6 @@
 # define _USE_MATH_DEFINES
 # include <math.h>
 
-template <typename T>
-T pow(T b, int p) {
-    T r = 1;
-    for (int i = 0; i < p; ++i) r *= b;
-    return r;
-}
-
 int fact(int x) {
     int r = 1;
     for (int i = 1; i <= x; ++i) r *= i;
@@ -17,14 +10,16 @@ int fact(int x) {
 }
 
 double step(double x, int i) {
-    return pow(x, i) * std::sin(i * M_PI / 4);
+    return x * std::sin(i * M_PI / 4);
 }
 
 double sum(double x, double epsilon) {
-    double s = 0, st;
+    double s = 0, p = 1, st;
     for (int i = 1; ; ++i) {
-        s += (st = step(x, i));
-	if (std::abs(st) < epsilon) break;
+        s += (st = step(p, i));
+        p *= x;
+        std::cout << st << '\n';
+        // if (std::abs(st) < epsilon) break;
     }
     return s;
 }
