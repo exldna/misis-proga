@@ -22,9 +22,9 @@ double step(double x, int i) {
 
 double sum(double x, double epsilon) {
     double s = 0, st;
-    for (int i = 0; ; ++i) {
-        s += (st = step(x, i)); // operator= return left operand
-        if (std::abs(st) < epsilon) break;
+    for (int i = 1; ; ++i) {
+        s += (st = step(x, i));
+	      if (std::abs(st) < epsilon) break;
     }
     return s;
 }
