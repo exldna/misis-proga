@@ -1,3 +1,6 @@
 [submodule "misis_proga_kr"]
 	path = misis_proga_kr
 	url = https://github.com/exldna/misis_proga_kr.git
+[submodule "Baron-Munchausen"]
+	path = Baron-Munchausen
+	url = https://github.com/exldna/Baron-Munchausen.git
